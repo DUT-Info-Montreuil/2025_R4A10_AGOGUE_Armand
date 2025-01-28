@@ -33,7 +33,9 @@ module.exports = {
 
   // 5) Ajouter Kasimu à la fin du tableau, il a 38 ans, et renvoyer le tableau modifié
   B5() {
-    return getEmployees().push({ name: "Kasimu", age: "38" });
+    let employees = getEmployees();
+    employees.push({ name: "Kasimu", age: 38 })
+    return employees;
   },
 
   // 6) Renvoyer la longueur du tableau

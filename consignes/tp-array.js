@@ -28,12 +28,14 @@ module.exports = {
 
   //4) Trier le tableau dans l'ordre croissant, renvoyez le tableau trié
   Q4() {
-    return getArray().sort();
+    return getArray().sort((a, b) => a - b)
   },
 
   //5) Ajouter la valeur 0 en premier index du tableau, renvoyez le tableau modifié
   Q5() {
-    return getArray().unshift(0);
+    let array = getArray();
+    array.unshift(0);
+    return array;
   },
 
   //6) Faire la somme des éléments du tableau avec une boucle for. Renvoyez la somme
@@ -48,17 +50,21 @@ module.exports = {
 
   //7) Faire la somme des éléments du tableau avec une méthode spécifique de tableau (reduce), renvoyez la somme
   Q7() {
-    return getArray().reduce((x, x) => x + y, 0);
+    return getArray().reduce((x, y) => x + y, 0);
   },
 
   //8) Remplacer la troisième valeur du tableau par "ici", renvoyez le tableau
   Q8() {
-    return getArray().splice(2, 1, "ici");
+    let array = getArray();
+    array.splice(2, 1, "ici");
+    return array;
   },
 
   //9) Retirer le dernier index, renvoyez le tableau
   Q9() {
-    return getArray().pop();
+    let array = getArray();
+    array.pop();
+    return array;
   },
 
   //10) Renvoyez le type de la variable ARRAY
