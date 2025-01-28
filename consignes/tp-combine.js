@@ -33,21 +33,26 @@ module.exports = {
 
   // 5) Ajouter Kasimu à la fin du tableau, il a 38 ans, et renvoyer le tableau modifié
   B5() {
-    
+    return getEmployees().push({ name: "Kasimu", age: "38" });
   },
 
   // 6) Renvoyer la longueur du tableau
   B6() {
-    // Implémentation ici
+    return getEmployees().length;
   },
 
   // 7) Remplacer le "o" de Theo par un "a", et renvoyer le tableau modifié
   B7() {
-    // Implémentation ici
+    return getEmployees().map((employee) => {
+      if (employee.name === "Theo") {
+        employee.name = "Thea";
+      }
+      return employee;
+    });
   },
 
   // 8) Renvoyer un tableau qui ne contient que les personnes ayant au moins un "e" dans leur nom
   B8() {
-    // Implémentation ici
+    return getEmployees().filter((employee) => employee.name.includes("e"));
   },
 };
