@@ -40,10 +40,8 @@ type RequestHTTP = {
     url: string,
     params?: string[],
     query?: string | {[key: string]: string},
-    body?: {[key: string]: unknown},
-    headers: {
-        "Content-Type": string
-    } & {[key: string]: string}
+    body?: Record<string, unknown>,
+    headers: Record<"Content-type", unknown> & Record<string, unknown>,
 }
 
 /* 
@@ -100,7 +98,7 @@ Le type ValidationSchema est constitué de deux propriétés:
 */
 
 type ValidationSchema = {
-    fields: { [key: string]: { [key: string]: unknown } },
+    fields: Record<string, Record<string, unknown>>,
     required?: string[]
 }
 
@@ -150,8 +148,6 @@ système de gestion d'erreur.
 
 type Reponse = {
     statusCode: number,
-    headers: {
-        "Content-Type": string
-    } & {[key: string]: string}
-    body: {[key: string]: unknown}
+    headers: Record<"Content-type", unknown> & Record<string, unknown>,
+    body: Record<string, unknown>,
 }
