@@ -1,0 +1,12 @@
+<div class="flex justify-between items-center py-8 lg:px-48 md:px-16 sm:px-8 px-4">
+    <div class="flex flex-row items-center gap-[12px]">
+        <div class="flex items-center justify-center w-[41px] h-[41px] bg-blue-500 rounded-full text-[26px] text-white text-bold">T</div>
+        <div class="font-bold text-2xl basecolor">Trafalgar</div>
+    </div>
+    <nav class="flex flex-row items-center gap-10 text-lg text-[#1f1534]">
+        @for (headerlink of headerlinks; track $index) {
+            <a [href]="headerlink.href" (click)="scrollToSection(headerlink.href, $index)" [class.font-bold]="activeLink === $index"
+            class="hover:text-blue-500">{{headerlink.label}}</a>
+        }
+    </nav>
+</div>

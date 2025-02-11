@@ -4,7 +4,14 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Mulish', 'sans-serif'],
+      },
+      colors:{
+        basecolor: "var(--base-color)",
+      }
+    },
   },
   plugins: [],
 }
